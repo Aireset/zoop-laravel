@@ -1,0 +1,37 @@
+{
+    "name": "aireset/zoop-laravel",
+    "description": "Pacote para facilitar integração com a ZOOP no laravel",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["zoop", "laravel"],
+    "authors": [
+        {
+            "name": "Felipe Almeman",
+            "email": "felipe@aireset.com.br",
+            "homepage": "https://github.com/aireset"
+        }
+    ],
+    "homepage": "https://github.com/aireset/zoop-laravel",
+    "autoload": {
+        "psr-4": {
+            "Aireset\\Zoop\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "^5.2|^6.0|^7.0",
+        "guzzlehttp/guzzle": "^6.0|^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aireset\\Zoop\\Providers\\ZoopServiceProvider"
+            ],
+            "aliases": {
+                "Zoop": "Aireset\\Zoop\\ZoopFacade",
+                "ZoopCard": "Aireset\\Zoop\\ZoopCardFacade"
+            }
+        }
+    }
+}
